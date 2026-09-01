@@ -17,10 +17,10 @@ public:
                     ans.push_back({nums[i], nums[left], nums[right]});
                     left++;
                     right--;
-                    while (left < n && nums[left] == nums[left - 1]) {
+                    while (left < right && nums[left] == nums[left - 1]) {
                         left++;
                     }
-                    while (right >= 0 && nums[right] == nums[right + 1]) {
+                    while (left < right && nums[right] == nums[right + 1]) {
                         right--;
                     }
                 } else if (s > sum) {
